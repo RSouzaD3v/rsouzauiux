@@ -1,17 +1,20 @@
 {
   "name": "rsouzauiux",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "React Components Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "copy-components.js"
   ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "node copy-components.js"
   },
   "babel": {
     "sourceType": "unambiguous",
@@ -32,6 +35,10 @@
   },
   "author": "rsouzad3v",
   "license": "MIT",
+  "resolutions": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.9",
     "@babel/preset-env": "^7.24.8",
@@ -54,6 +61,7 @@
     "react-dom": "^18.3.1",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^3.4.7",
     "ts-jest": "^29.2.3",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
@@ -63,6 +71,9 @@
     "react": ">=16"
   },
   "dependencies": {
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^10.1.2",
     "polished": "^4.3.1",
     "styled-components": "^6.1.12"
   }

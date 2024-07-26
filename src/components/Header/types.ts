@@ -1,6 +1,4 @@
-import React$1 from 'react';
-
-interface HeaderProps {
+export interface HeaderProps {
     links: {
         title: string;
         link: string;
@@ -10,9 +8,5 @@ interface HeaderProps {
         bgcolor?: string;
         color?: string;
         padding?: string | number;
-    };
+    }
 }
-
-declare const Header: React$1.FC<HeaderProps>;
-
-export { Header };
